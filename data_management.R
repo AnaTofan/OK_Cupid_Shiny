@@ -12,6 +12,8 @@ library(scales)
 library(stringr)
 library(fs)
 library(viridis)
+library(ggmosaic)
+library(plyr)
 
 # in utils all the functions that 
 # hide the complexity of the application can be found

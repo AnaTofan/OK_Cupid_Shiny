@@ -24,3 +24,12 @@ over_bar_x <- c("age", "sex", "education", "job", "income", "diet",
 
 density_x <- c("status", "offspring", "drugs", "smokes", "drinks"
 )
+
+
+gender_plot_select <- c("gender distribution",
+                        "gender density",
+                        "number of people by age",
+                        "proportion of gender by age",
+                        "mosaic plot",
+                        "ethnicity by gender",
+                        "status by gender")

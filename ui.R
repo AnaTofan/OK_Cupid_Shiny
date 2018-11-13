@@ -145,12 +145,30 @@ ui <- shinydashboard::dashboardPage(
                         )
                     ),
                     
+                    tabPanel( 
+                        title = "Gender insights",
+                        fluidRow(
+                            column(
+                                selectInput("select_plot", "Choose desired plot:",
+                                            choices = gender_plot_select),
+                                width = 2
+                            ),
+                            
+                            column(
+                                plotOutput(
+                                    outputId = 'gender_plot',
+                                    height = '500px'
+                                ),
+                                width = 10
+                            )
+                        )
+                    ),
+                    
                     width = NULL
                 )
             )
         )
     )
-
 )
 
 
