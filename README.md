@@ -6,8 +6,8 @@ Data Visualization project for OK Cupid data set
 2. Install required packages
 For `rflow` package installation, devtools is needed:
  ```
-install.packages('devtools')
-devtools::install_github('https://github.com/numeract/rflow')
+ install.packages("devtools")
+devtools::install_github("numeract/rflow")
 ```
 3. Run server.R
 4. First run will take a while given the fact that the project uses a cacheing mechanism. 
