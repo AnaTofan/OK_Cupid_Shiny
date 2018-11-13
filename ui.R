@@ -10,24 +10,21 @@ ui <- shinydashboard::dashboardPage(
     
     # Sidebar ----
     sidebar = shinydashboard::dashboardSidebar(
-        shinydashboard::sidebarMenu(
+        shinydashboard::sidebarMenu( 
             shinydashboard::menuItem(
                 text = "Overview",
                 tabName = "overview_tab",
-                selected = TRUE,
-                icon = icon('list')
+                selected = TRUE
             ), 
             shinydashboard::menuItem(
                 text = "Word Cloud",
                 tabName = "wordcloud_tab",
-                selected = FALSE,
-                icon = icon('list')
+                selected = FALSE
             ),
             shinydashboard::menuItem(
                 text = "Health habits",
                 tabName = "health_tab",
-                selected = FALSE,
-                icon = icon('list')
+                selected = FALSE
             )
         )
     ),
@@ -81,7 +78,8 @@ ui <- shinydashboard::dashboardPage(
                                 selectInput("stack_y", "Choose second variable:",
                                             choices = stack_y),
                                 hr(),
-                                checkboxInput("include_na", "Hide NA values"),
+                                checkboxInput("exclude_na", "Hide NA values",
+                                              TRUE),
                                 width = 2
                             ),
                             
@@ -108,8 +106,9 @@ ui <- shinydashboard::dashboardPage(
                                 selectInput("over_bar_x", "Choose variable:",
                                             choices = over_bar_x),
                                 hr(),
-                                checkboxInput("over_include_na", 
-                                              "Hide NA values"),
+                                checkboxInput("over_exclude_na", 
+                                              "Hide NA values",
+                                              TRUE),
                                 width = 2
                             ),
                             
@@ -130,8 +129,9 @@ ui <- shinydashboard::dashboardPage(
                                 selectInput("density_x", "Choose variable:",
                                             choices = density_x),
                                 hr(),
-                                checkboxInput("density_include_na", 
-                                              "Hide NA values"),
+                                checkboxInput("density_exclude_na", 
+                                              "Hide NA values",
+                                              TRUE),
                                 width = 2
                             ),
                             

@@ -18,17 +18,17 @@ shinyServer(function(input, output, session) {
     
     bar_plot_reactive <- reactive({
         create_bar_count_plot(cupid_data, input$over_bar_x, "count",
-                              input$over_include_na)
+                              input$over_exclude_na)
     })
     
     density_plot_reactive <- reactive({
         create_density_plot(cupid_data, input$density_x, "age",
-                              input$density_include_na)
+                              input$density_exclude_na)
     })
     
     stack_plot_reactive <- reactive({
         create_stacked_bar_plot(cupid_data, input$stack_x, input$stack_y,
-                                input$include_na)
+                                input$exclude_na)
     })
     
     output$wordcloud <- renderPlot({
