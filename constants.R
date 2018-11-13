@@ -1,7 +1,16 @@
 .TITLE <- "OK Cupid Explorer"
-folder <-  getwd()
+jobs <- c("artistic / musical / writer",     "banking / financial / real estate",
+          "clerical / administrative",       "computer / hardware / software",   
+          "construction / craftsmanship",    "education / academia",             
+          "entertainment / media",           "executive / management",           
+          "hospitality / travel",            "law / legal services",             
+          "medicine / health",               "military",                         
+          "other",                           "political / government",           
+          "rather not say",                  "retired",                          
+          "sales / marketing / biz dev",     "science / tech / engineering",     
+          "student",                         "transportation",                   
+          "unemployed")
 
-jobs <- levels(as.factor(cupid_data$job))
 stack_x <- c("body_type", "diet", "drinks", "drugs", "education",
              "income", "job", "sex", "smokes", "status",
              "religion", "religious_affil",

@@ -11,12 +11,12 @@ library(wesanderson)
 library(scales)
 library(stringr)
 library(fs)
+library(viridis)
+
 # in utils all the functions that 
 # hide the complexity of the application can be found
 source("constants.R")
 source("utils.R")
-library(viridis)
-
 # try to set up proper cache for time consuming functions due to the
 # computations performed on a large dataset
 # If the cache is not yet configured, create a new one
