@@ -143,6 +143,8 @@ generate_essay_file <- function(cupid_data, job) {
         dplyr::select(essay2)
     
     file_path <- paste0("description_by_job/", main_job, "_essay.txt")
+	fs::dir_create("description_by_job/")
+	fs::file_create(file_path)
     write.table(cupid_new, file = file_path, sep = " ")
 }
 
